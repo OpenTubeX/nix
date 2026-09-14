@@ -1,0 +1,22 @@
+{
+  "version": "0.34.1-beta",
+  "tag": "v0.34.1-beta",
+  "sources": {
+    "x86_64-linux": {
+      "name": "opentubex_0.34.1_beta_amd64.deb",
+      "hash": "sha256-gPFag3KguatHlD5iAOjruSeT0ItzmbGEZ3nrCRCpbRY="
+    },
+    "aarch64-linux": {
+      "name": "opentubex_0.34.1_beta_arm64.deb",
+      "hash": "sha256-3V6PkM/U5rrMWLY4/ssgZB+FQVwE+4ewJnfhN0KmPU4="
+    },
+    "x86_64-darwin": {
+      "name": "opentubex-0.34.1-beta-mac-x64.zip",
+      "hash": "sha256-jVzyvtL0wiULfaccD4nT2LtLKZTvgeRaKca/iaIlt3M="
+    },
+    "aarch64-darwin": {
+      "name": "opentubex-0.34.1-beta-mac-arm64.zip",
+      "hash": "sha256-o6P3q5F1j2EvO+7nG57vAFRKC8CaC2tOx2sMp32Do60="
+    }
+  }
+}
