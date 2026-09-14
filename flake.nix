@@ -32,7 +32,7 @@
         default = {
           type = "app";
           program = "${self.packages.${system}.opentubex}/bin/opentubex";
-          meta.description = self.description;
+          meta.description = self.packages.${system}.opentubex.meta.description;
         };
         opentubex = self.apps.${system}.default;
       });
