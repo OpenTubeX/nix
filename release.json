@@ -1,22 +1,22 @@
 {
-  "version": "0.36.1-beta",
-  "tag": "v0.36.1-beta",
+  "version": "0.37.0-beta",
+  "tag": "v0.37.0-beta",
   "sources": {
     "x86_64-linux": {
-      "name": "opentubex_0.36.1_beta_amd64.deb",
-      "hash": "sha256-or/Uk4w3YUAvPdNiJM20GREQEHBZoviMTP7ejDz9poY="
+      "name": "opentubex_0.37.0_beta_amd64.deb",
+      "hash": "sha256-48FHgD0N4dUlV2XUWalMi9gO/lIDwdFCWCYjbqRP6K0="
     },
     "aarch64-linux": {
-      "name": "opentubex_0.36.1_beta_arm64.deb",
-      "hash": "sha256-YSYFprunJrUi/6Geu3ArH0rSyEbAxEsGZDxQ4TQ01lg="
+      "name": "opentubex_0.37.0_beta_arm64.deb",
+      "hash": "sha256-KFrDmZOiTKSNCmvtynTqreIBxAuds2n5u2yERUAe53s="
     },
     "x86_64-darwin": {
-      "name": "opentubex-0.36.1-beta-mac-x64.zip",
-      "hash": "sha256-1UiinH7aJ+pIdCOQ1qdj95MJzVpksBWwnKk0HiMynLQ="
+      "name": "opentubex-0.37.0-beta-mac-x64.zip",
+      "hash": "sha256-v3ZvH/E6cqPRCTLu21Y48HDGblOuxYB0eFpuzg+ptTE="
     },
     "aarch64-darwin": {
-      "name": "opentubex-0.36.1-beta-mac-arm64.zip",
-      "hash": "sha256-ydsPlag/mljL6MMlDLJPbU8KJnMtIBPTz+F8MdSGfOw="
+      "name": "opentubex-0.37.0-beta-mac-arm64.zip",
+      "hash": "sha256-ftR1B0UvGPjgsKOl1glYNzARIjEfFjMIaQ4CbDTZ5fg="
     }
   }
 }
