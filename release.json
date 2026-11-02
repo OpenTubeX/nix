@@ -1,22 +1,22 @@
 {
-  "version": "0.37.2-beta",
-  "tag": "v0.37.2-beta",
+  "version": "0.37.3-beta",
+  "tag": "v0.37.3-beta",
   "sources": {
     "x86_64-linux": {
-      "name": "opentubex_0.37.2_beta_amd64.deb",
-      "hash": "sha256-Zb23oHyYIHjmbJ0u8V3Tnu72xaaqoaRc9JmeTxZZBk8="
+      "name": "opentubex_0.37.3_beta_amd64.deb",
+      "hash": "sha256-pTgmS5CTiXQ9Iax/xyuQPHoLgJYPiQAFBHMjpETxfdA="
     },
     "aarch64-linux": {
-      "name": "opentubex_0.37.2_beta_arm64.deb",
-      "hash": "sha256-Du+dOiKVVmlv6O2Y4Z8tgniyL+v1wm1evpsI8WK9uXM="
+      "name": "opentubex_0.37.3_beta_arm64.deb",
+      "hash": "sha256-Fj5d7t5qsnnkcBMbz5j5Rd8MbDDA5Xbk65ApTeV2FEM="
     },
     "x86_64-darwin": {
-      "name": "opentubex-0.37.2-beta-mac-x64.zip",
-      "hash": "sha256-0UQ1kDTf3uPcURlhmeXNHCzn3PlvLj7XcwTlsF7jl60="
+      "name": "opentubex-0.37.3-beta-mac-x64.zip",
+      "hash": "sha256-osm/Dl0cDk58KodNSN3Tu3x/odDWDKxmmlkrMKd9Wn0="
     },
     "aarch64-darwin": {
-      "name": "opentubex-0.37.2-beta-mac-arm64.zip",
-      "hash": "sha256-7DyA7trdvniKMkRhQTQuYuMsFmW06zzWK5tDgHzuuRU="
+      "name": "opentubex-0.37.3-beta-mac-arm64.zip",
+      "hash": "sha256-9J8LkUT8KQ6Hk/wTBM0z8ECtrx+sGyu8LGGk2E1IGG8="
     }
   }
 }
