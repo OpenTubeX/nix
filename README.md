@@ -8,7 +8,7 @@ with their bundled Electron runtime.
 | Platform | Architectures |
 | --- | --- |
 | NixOS and Linux | `x86_64-linux`, `aarch64-linux` |
-| macOS | `x86_64-darwin` for Intel, `aarch64-darwin` for Apple Silicon |
+| macOS 13 or later | `x86_64-darwin` for Intel, `aarch64-darwin` for Apple Silicon |
 
 ## Install OpenTubeX
 
