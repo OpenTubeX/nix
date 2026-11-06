@@ -23,7 +23,7 @@ experimental-features = nix-command flakes
 Then install OpenTubeX in your user profile:
 
 ```sh
-nix profile install github:OpenTubeX/nix#opentubex
+nix profile add github:OpenTubeX/nix#opentubex
 opentubex
 ```
 
