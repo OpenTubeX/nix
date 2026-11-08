@@ -8,7 +8,7 @@ with their bundled Electron runtime.
 | Platform | Architectures |
 | --- | --- |
 | NixOS and Linux | `x86_64-linux`, `aarch64-linux` |
-| macOS 13 or later | `x86_64-darwin` for Intel, `aarch64-darwin` for Apple Silicon |
+| macOS 14 or later | `x86_64-darwin` for Intel, `aarch64-darwin` for Apple Silicon |
 
 ## Install OpenTubeX
 
@@ -88,8 +88,9 @@ New releases are pinned automatically in this repository. Existing
 installations update when you run the commands above. There is currently no
 nightly package channel.
 
-Intel Mac support uses Nixpkgs 26.05, the last Nixpkgs release supporting
-`x86_64-darwin`. Keep that constraint in mind when overriding the Nixpkgs
+The package outputs use Nixpkgs unstable, except on Intel Macs: those use the
+separate `nixpkgs-x86_64-darwin` input, pinned to Nixpkgs 26.05, the last
+release supporting `x86_64-darwin`. Keep that in mind when overriding either
 input or using the overlay.
 
 ## How publishing works
@@ -103,7 +104,7 @@ release.
 For a release update, the workflow:
 
 1. records the release version, asset names, and SHA-256 digests in
-   `release.json`;
+   `release.json`, refusing releases older than the current pin;
 2. builds the packages and checks the bundled runtime on native runners for
    all four platforms, verifying each downloaded asset against its digest;
 3. verifies both macOS bundle signatures;
