@@ -9,13 +9,27 @@ import re
 import subprocess
 
 
-def release_metadata(release):
+VERSION = re.compile(r"(\d+)\.(\d+)\.(\d+)(-beta)?")
+
+
+def version_key(version):
+    match = VERSION.fullmatch(version)
+    if match is None:
+        raise ValueError(f"Unexpected version: {version}")
+    major, minor, patch, beta = match.groups()
+    # Betas precede the final release.
+    return int(major), int(minor), int(patch), beta is None
+
+
+def release_metadata(release, current_version):
     tag = release["tag_name"]
     match = re.fullmatch(r"v(\d+\.\d+\.\d+)(-beta)?", tag)
     if not match or release.get("draft") or release.get("prerelease"):
         raise ValueError(f"Expected a published stable release, got {tag!r}")
     version, suffix = match.groups()
     version_with_suffix = version + (suffix or "")
+    if version_key(version_with_suffix) < version_key(current_version):
+        raise ValueError(f"Refusing to downgrade the pin from {current_version} to {version_with_suffix}")
     deb_version = version_with_suffix.replace("-", "_")
     names = {
         "x86_64-linux": f"opentubex_{deb_version}_amd64.deb",
@@ -48,7 +62,8 @@ def main():
         ["gh", "api", f"repos/OpenTubeX/OpenTubeX/releases/{endpoint}"],
         check=True, capture_output=True, text=True,
     )
-    metadata = release_metadata(json.loads(result.stdout))
+    current_version = json.loads(args.output.read_text())["version"]
+    metadata = release_metadata(json.loads(result.stdout), current_version)
     # Validate every platform before touching the existing pin.
     args.output.write_text(json.dumps(metadata, indent=2) + "\n")
     print(f"Pinned OpenTubeX {metadata['version']}")
